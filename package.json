@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build ./frontend; fi "
+    "build": "./frontend/ npm run build:prod",
+    "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build; fi "
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
