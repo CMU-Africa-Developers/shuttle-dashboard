@@ -16,6 +16,8 @@ import router from './router'
 import '@/icons' // icon
 import '@/permission' // permission control
 
+import * as VueGoogleMaps from 'vue2-google-maps'
+
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api
@@ -30,6 +32,16 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 Vue.use(firestorePlugin)
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    // Google API key
+    key: 'AIzaSyDmp3gGUMYRItduQCRWwvDZeR-uPjS_89k',
+    // Enable more Google Maps libraries here
+    libraries: ['places'],
+    installComponents: true,
+  },
+})
 
 // set ElementUI lang to EN
 Vue.use(ElementUI, { locale })

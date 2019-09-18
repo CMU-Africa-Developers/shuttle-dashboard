@@ -245,7 +245,7 @@
       },
       onDeleteDriver() {
         this.deleteDialogVisible = false
-        db.collection('drivers').doc(this.idToDelete).remove().then(() => {
+        db.collection('drivers').doc(this.idToDelete).delete().then(() => {
           this.$notify({
             title: 'Successful',
             message: 'Driver deleted!',

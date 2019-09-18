@@ -60,19 +60,13 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/routes/all',
     name: 'Bus Routes',
-    meta: { title: 'Manage Routes', icon: 'route' },
+    meta: { title: 'Bus Routes', icon: 'route' },
     children: [
       {
-        path: 'all',
-        name: 'Bus Routes',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Bus Routes', icon: 'manage_route' }
-      },
-      {
-        path: 'tree',
+        path: 'manage',
         name: 'Add Route',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Add route', icon: 'add' }
+        component: () => import('@/views/routes/add'),
+        meta: { title: 'Manage routes', icon: 'add' }
       }
     ]
   },

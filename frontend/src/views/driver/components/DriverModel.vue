@@ -49,7 +49,7 @@
 
 <script>
   import {db} from '../../../../db/db'
-
+  import firebase from 'firebase/auth'
   import ImageCropper from '@/components/ImageCropper'
   import PanThumb from '@/components/PanThumb'
 
